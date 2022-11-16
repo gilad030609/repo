@@ -39,8 +39,8 @@ grains:
         store: assets
         path: assets/terraform/rds
       host:
-        name: demo-prod
-        service-account: app-sa
+        name: gmp-pro-aws
+        service-account: gmp-aws-sa
       inputs:
         - sandbox_id: '{{ sandboxid | downcase }}'
         - size: '{{ .inputs.["DB Size"] }}' 
@@ -62,8 +62,8 @@ grains:
         store: assets
         path: assets/terraform/s3
       host:
-        name: demo-prod
-        service-account: app-sa
+        name: gmp-pro-aws
+        service-account: gmp-aws-sa
       inputs:
         - region: eu-west-1
         - acl: public-read
@@ -79,7 +79,7 @@ grains:
         store: assets
         path: assets/helm/robotShop
       host:
-        name: demo-prod
+        name: gmp-pro-aws
       # commands:
       #   - "dep up xxx"
       scripts:
